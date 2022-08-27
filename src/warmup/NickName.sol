@@ -16,7 +16,7 @@ contract NicknameChallenge {
     address player;
 
     // Your address gets passed in as a constructor parameter.
-    constructor (address _player) public {
+    constructor (address _player) {
         player = _player;
     }
 
