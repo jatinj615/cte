@@ -2,6 +2,9 @@
 cache/
 out/
 
+# env file
+.env
+
 # Ignores development broadcast logs
 !/broadcast
 /broadcast/*
