@@ -16,7 +16,7 @@ contract MyScript is Script {
         ptbhc.lockInGuess{value: fee}(guessHash);
 
         // after 257 blocks run 
-        ptbhc.guess();
+        ptbhc.settle();
 
         vm.stopBroadcast();
 
