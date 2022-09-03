@@ -11,6 +11,7 @@ contract MyScript is Script {
 
         PredictTheFutureChallenge ptfc = new PredictTheFutureChallenge{value:1 ether}();
 
+        // random int between 0-9 (only possible solutions)
         uint8 number = 0;
 
         uint256 fee = 1 ether;
@@ -18,7 +19,7 @@ contract MyScript is Script {
         PredictTheFutureAttack attack = new PredictTheFutureAttack(address(ptfc));
         
         attack.lockIn{value: fee}(number);
-        // call after 1 block mined
+        // spam call after 1 block mined
         // attack.attack();
         
         vm.stopBroadcast();
