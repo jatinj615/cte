@@ -9,7 +9,7 @@ contract MyScript is Script {
 
         vm.startBroadcast();
 
-        TokenSaleChallenge tsc = new TokenSaleChallenge{value: 1 ether}();
+        TokenSaleChallenge tsc = new TokenSaleChallenge{value: 1 ether}(msg.sender);
 
         // max uint256 value calculate for overflow
         uint256 number = (type(uint256).max/10**18) + 1;
