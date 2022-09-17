@@ -1,7 +1,6 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
-import "forge-std/console.sol";
 import "../../src/math-challenge/Mapping.sol";
 
 contract MyScript is Script {
@@ -15,10 +14,6 @@ contract MyScript is Script {
         uint256 index = type(uint256).max - uint256(keccak256(abi.encode(bytes32(uint256(1))))) + 1;
 
         mc.set(index, 1);
-
-        console.log(mc.get(index));
-
-        console.logBool(mc.isComplete());
 
         vm.stopBroadcast();
 
